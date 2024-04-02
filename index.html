@@ -27,7 +27,7 @@
     <main>
       <section class="icons-section">
         <img src="images/logo.svg" alt="" />
-        <div class="icon-array">
+        <span class="icon-array">
           <a href="#">
             <img src="images/icon-document.svg" alt="" />
           </a>
@@ -37,14 +37,21 @@
           <a href="#">
             <img src="images/icon-upload.svg" alt="" />
           </a>
-        </div>
+        </span>
       </section>
       <section class="text-section">
-        <p>You’ve used<bold>815 GB</bold>of your storage</p>
+        <p class="message">You’ve used <bold>815 GB</bold> of your storage</p>
 
         <div>
-          <p>0 GB</p>
-          <p>1000 GB</p>
+          <div class="slider-container">
+            <input class="slider"><div class="dot"></div></input>
+          </div>
+
+         <p class="range">
+          <span class="zero">0 GB</span>
+          <span class="thousand">1000 GB</span>
+         </p>
+         
         </div>
 
         <p>185 GB Left</p>
