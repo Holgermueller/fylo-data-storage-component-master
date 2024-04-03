@@ -97,7 +97,7 @@ body {
   padding: 0;
   width: 100vw;
   overflow-x: hidden;
-  background: url("images/bg-mobile.png");
+  background: url("../images/bg-mobile.png");
   display: grid;
   place-items: center;
   align-content: center;
@@ -217,10 +217,6 @@ main {
   font-size: 2rem;
 }
 
-.arrow {
-  display: none;
-}
-
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -232,7 +228,7 @@ main {
 
 @media screen and (min-width: 600px) {
   body {
-    background: url("images/bg-desktop.png");
+    background: url("../images/bg-desktop.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: hsl(228, 56%, 26%);
@@ -262,14 +258,21 @@ main {
 
   .gigs-remaining {
     transform: translate(9rem, -13rem);
+    position: relative;
   }
 
-  .arrow {
+  .gigs-remaining::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 90%;
     width: 0;
     height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-
-    border-right: 10px solid blue;
+    border: 30px solid transparent;
+    border-top-color: hsl(0, 0%, 100%);
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -15px;
+    margin-bottom: -19px;
   }
 }
