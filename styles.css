@@ -114,12 +114,12 @@ main {
 .icons-section,
 .text-section {
   background-color: hsl(228, 56%, 26%);
-  padding: 40px;
   border-radius: 15px;
 }
 
 .icons-section {
   border-top-right-radius: 60%;
+  padding: 50px;
 }
 
 .icon-array {
@@ -136,9 +136,19 @@ main {
   margin-right: 20px;
 }
 
+.text-section {
+  padding: 40px;
+}
+
+.message {
+  margin: 4px;
+  text-align: center;
+}
+
 .message,
 .zero,
 .thousand {
+  font-size: 0.9rem;
   color: hsl(243, 100%, 93%);
 }
 
@@ -156,7 +166,7 @@ main {
   background: hsl(229, 57%, 11%);
   display: grid;
   align-items: center;
-  margin: 0 auto;
+  margin: 8px auto;
   position: relative;
 }
 
@@ -168,6 +178,8 @@ main {
   border: none;
   margin-left: 5px;
   position: absolute;
+  display: grid;
+  align-items: center;
 }
 
 .dot {
@@ -176,7 +188,7 @@ main {
   border-radius: 36px;
   position: absolute;
   background-color: hsl(243, 100%, 93%);
-  margin-left: 71%;
+  margin-left: 92%;
 }
 
 .range {
@@ -185,10 +197,41 @@ main {
   justify-content: space-between;
 }
 
+.gigs-remaining {
+  background-color: hsl(0, 0%, 100%);
+  text-align: center;
+  border-radius: 15px;
+  width: max-content;
+  padding: 10px 20px;
+  margin: auto;
+  transform: translateY(-3.5rem);
+}
+
+.gigs-remaining p {
+  margin-top: 0;
+  color: hsl(229, 7%, 55%);
+}
+
+.gigs-remaining p span {
+  color: black;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: hsl(0, 0%, 100%);
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(6, 100%, 80%);
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background: url("images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(228, 56%, 26%);
+  }
 }
