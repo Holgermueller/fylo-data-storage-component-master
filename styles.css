@@ -135,6 +135,13 @@ main {
   margin-right: 20px;
 }
 
+.hidden-text {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  color: transparent;
+}
+
 .text-container {
   padding: 40px;
 }
@@ -142,6 +149,7 @@ main {
 .message {
   margin: 4px;
   text-align: center;
+  font-weight: 400;
 }
 
 .message,
@@ -151,7 +159,7 @@ main {
   color: hsl(243, 100%, 93%);
 }
 
-.message bold,
+.message span,
 .zero,
 .thousand {
   font-weight: 700;
