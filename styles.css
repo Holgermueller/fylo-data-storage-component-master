@@ -106,13 +106,12 @@ body {
 main {
   width: 90%;
   margin: auto;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 20px;
 }
 
 .icons-section,
-.text-section {
+.text-container {
   background-color: hsl(228, 56%, 26%);
   border-radius: 15px;
 }
@@ -136,7 +135,7 @@ main {
   margin-right: 20px;
 }
 
-.text-section {
+.text-container {
   padding: 40px;
 }
 
@@ -204,7 +203,7 @@ main {
   width: max-content;
   padding: 10px 20px;
   margin: auto;
-  transform: translateY(-3.5rem);
+  transform: translateY(-2rem);
 }
 
 .gigs-remaining p {
@@ -216,6 +215,10 @@ main {
   color: black;
   font-weight: 700;
   font-size: 2rem;
+}
+
+.arrow {
+  display: none;
 }
 
 .attribution {
@@ -233,5 +236,40 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     background-color: hsl(228, 56%, 26%);
+  }
+
+  main {
+    width: 75%;
+    grid-template-columns: 4;
+  }
+
+  .message {
+    text-align: left;
+  }
+
+  .icons-section {
+    grid-column: 1;
+  }
+
+  .text-section {
+    grid-column: 2/4;
+    transform: translateY(4rem);
+  }
+
+  .dot {
+    margin-left: 96%;
+  }
+
+  .gigs-remaining {
+    transform: translate(9rem, -13rem);
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+    border-right: 10px solid blue;
   }
 }
