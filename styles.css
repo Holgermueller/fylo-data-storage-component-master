@@ -204,6 +204,10 @@ main {
   justify-content: space-between;
 }
 
+.gigs-remaining-top {
+  display: none;
+}
+
 .gigs-remaining {
   background-color: hsl(0, 0%, 100%);
   text-align: center;
@@ -211,6 +215,9 @@ main {
   width: max-content;
   padding: 10px 20px;
   margin: auto;
+}
+
+.gigs-remaining-bottom {
   transform: translateY(-2rem);
 }
 
@@ -238,13 +245,13 @@ main {
   body {
     background: url("../images/bg-desktop.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: hsl(228, 56%, 26%);
+    background-position: bottom;
+    background-color: #0b122b;
   }
 
   main {
     width: 75%;
-    grid-template-columns: 4;
+    grid-template-columns: 1fr 1.5fr;
   }
 
   .message {
@@ -256,20 +263,25 @@ main {
   }
 
   .text-section {
-    grid-column: 2/4;
-    transform: translateY(4rem);
+    height: max-content;
+    grid-column: 2/3;
   }
 
   .dot {
     margin-left: 96%;
   }
 
-  .gigs-remaining {
-    transform: translate(9rem, -13rem);
+  .gigs-remaining-bottom {
+    display: none;
+  }
+
+  .gigs-remaining-top {
+    display: block;
+    transform: translate(10rem, 1rem);
     position: relative;
   }
 
-  .gigs-remaining::after {
+  .gigs-remaining-top::after {
     content: "";
     position: absolute;
     bottom: 0;
